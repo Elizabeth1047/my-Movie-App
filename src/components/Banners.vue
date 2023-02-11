@@ -1,9 +1,11 @@
 <script setup>
 import getimage from "../lib/getimage.js";
+import { RouterLink } from "vue-router";
 import { Icon } from "@iconify/vue";
 const { banner } = defineProps(["banner"]);
 
 const {
+  id,
   title,
   overview,
   backdrop_path: background,
@@ -26,10 +28,10 @@ const description =
       bg-gradient-to-r from-black to-transparent">
       <h1 class="text-8xl font-bold">{{ title }}</h1>
       <p class="mt-2 w-1/2 text-sm text-neutral-400">{{ description }}</p>
-      <button class="flex items-center gap-1 px-6 py-4 rounded-md bg-green-700 w-fit mt-4 transition hover:bg-neutral-800 font-semibold">
+      <router-link :to="`/movies/${id}`"  class="flex items-center gap-1 px-6 py-4 rounded-md bg-green-700 w-fit mt-4 transition hover:bg-neutral-800 font-semibold">
           <span>view more</span>
           <span> <icon icon="ic:round-play-arrow"/></span>
-      </button>
+      </router-link>
     </div>
     <!-- <img :src="getimage(background)" /> -->
   </div>

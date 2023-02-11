@@ -1,5 +1,6 @@
 <script setup>
 import { Icon } from "@iconify/vue";
+import { RouterLink } from "vue-router";
 </script>
 
 <template>
