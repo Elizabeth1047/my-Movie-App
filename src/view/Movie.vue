@@ -2,12 +2,15 @@
 import { useRouter } from "vue-router";
 import Navbar from "../components/Navbar.vue";
 import { ref } from "vue";
+import { defineAsyncComponent } from "vue";
 import getimage from "../lib/getimage";
 import { Icon } from "@iconify/vue";
 const router = useRouter();
 const movieid = router.currentRoute.value.params.id;
 console.log(movieid);
 const movie=ref(null)
+
+
 
 
 movie.value =  await fetch (`https://api.themoviedb.org/3/movie/${movieid}?api_key=6626dee37dbdb674157044e41e9f3c88&language=en-US`) 

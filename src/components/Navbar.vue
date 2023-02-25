@@ -8,11 +8,11 @@ import { RouterLink } from "vue-router";
                 py-4 top-4 bg-transparent border-b-2 border-neutral-400">
         <div class="flex items-center text-3xl font-bold gap-2">
             <icon icon="mingcute:movie-line" width="40"/>
-            <span>NetChill</span>
+            <span>Lizzyflix</span>
         </div>  
         <ul class="flex items-center font-semibold gap-4">
-            <li>movies</li>
-            <li>movies</li>
+            <li>Home</li>
+            <li>Movies</li>
         </ul>  
         
     </nav>
