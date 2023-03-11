@@ -1,15 +1,18 @@
 <script setup>
 import { ref, onBeforeMount , defineAsyncComponent } from 'vue'
- import Movielist from '../components/Movielist.vue';
 
+const AsyncBanner=defineAsyncComponent(()=>
+      import('../components/Banners.vue')
+  )
 
+  const Movielist=defineAsyncComponent(()=>
+      import('../components/Movielist.vue')
+  )
  
 const movies=ref([])
 const bannermovie=ref(null)
 
-  const AsyncBanner=defineAsyncComponent(()=>
-      import('../components/Banners.vue')
-  )
+  
 
 
 const getmovie= async ()=>{
